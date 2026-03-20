@@ -1,38 +1,43 @@
-# Food Ordering App Built Using MERN Stack!
-[food ordering app screenshot](https://user-images.githubusercontent.com/50160672/180350693-92a71ecb-7672-49b1-8943-188e96d13ee6.png)
+# Food Ordering App (MERN Stack)
 
+A full-stack food ordering platform built with the MERN stack (MongoDB, Express, React, Node.js), featuring Stripe payment processing and Firebase user authentication.
 
-For a tutorial, please watch [this video](https://www.youtube.com/watch?v=x4dIga_3S4I).
+## Features
 
-## Available Scripts
+- Product menu with category filtering
+- Shopping cart with item management
+- User registration and login (Firebase)
+- Stripe payment integration with webhooks
+- Admin panel to add new products
+- Order confirmation page
 
-In the root of the project run:
+## Tech Stack
 
-### `npm install`
+- **Frontend**: React, Redux Toolkit, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: MongoDB (Mongoose)
+- **Auth**: Firebase Authentication
+- **Payments**: Stripe
 
-Also, navigate to the server folder and install modules there. You can do that by running:
+## Getting Started
 
-### `cd server && npm install`
+### 1. Install frontend dependencies
 
-Afterwards, start the server from the server folder by running:
-
-### `node index.js`
-
-or 
-
-### `nodemon index.js`
-
-And to start the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-Go back to the project directory, you can run:
-
-### `npm start`
-
-## Environment variables
-
-To store your environment variables, you can create `.env` file in the root of your project and fill in the following values:
+```bash
+npm install
 ```
+
+### 2. Install backend dependencies
+
+```bash
+cd server && npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env` file in the project root and add the following:
+
+```env
 STRIPE_SECRET_KEY=""
 STRIPE_WEBHOOK_SECRET=""
 REACT_APP_STRIPE_PUBLISHABLE_KEY=""
@@ -44,3 +49,27 @@ REACT_APP_FIREBASE_CONFIG_MESSAGING_SENDER_ID=""
 REACT_APP_FIREBASE_CONFIG_APP_ID=""
 REACT_APP_FIREBASE_CONFIG_MEASUREMENT_ID=""
 ```
+
+### 4. Start the backend
+
+```bash
+cd server
+node index.js
+```
+
+Or with auto-reload:
+
+```bash
+cd server
+nodemon index.js
+```
+
+### 5. Start the frontend
+
+Go back to the project root and run:
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app.

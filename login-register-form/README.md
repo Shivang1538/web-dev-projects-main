@@ -1,13 +1,31 @@
-# Elegant Login & Register Forms built in React
-![Screen Shot 2022-07-25 at 10 55 45 PM](https://user-images.githubusercontent.com/50160672/180913657-95824335-8089-4be3-91ba-6a0cbaef3d71.png)
+# Login & Register Form (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An elegant authentication UI built with React that allows users to toggle between a Login and a Register form without navigating to a new page.
+
+## Features
+
+- Toggle between Login and Register forms
+- Email and password input fields
+- Client-side state management with React hooks
+- Clean, minimal responsive design
+
+## Tech Stack
+
+- **Frontend**: React (Create React App)
+
+## Getting Started
+
+```bash
+npm install
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
 ## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Command | Description |
+|---------|-------------|
+| `npm start` | Run the app in development mode |
+| `npm test` | Launch the test runner |
+| `npm run build` | Build the app for production |
