@@ -1,36 +1,35 @@
-# Personal Portfolio Website in React
+# Personal Portfolio Website (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive personal portfolio website built with React and React-Bootstrap. It includes sections for a hero banner, skills, projects, a contact form, and a newsletter subscription.
 
-<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="https://user-images.githubusercontent.com/50160672/174933373-1ba6cadf-1c9a-48c3-aa58-984d0bd62d82.png">
+## Features
 
-Built using:
+- Sticky navigation bar with scroll-based active highlighting
+- Animated hero/banner section
+- Skills section with visual progress meters
+- Projects showcase grid
+- Contact form with email integration
+- Newsletter subscription via Mailchimp
+- Custom fonts and CSS animations (Animate.css)
 
-- Front-end library: React
-- CSS framework: React-bootstrap
-- CSS animations library: Animate.css
+## Tech Stack
 
-In the /personal-portfolio, you can run:
+- **Frontend**: React, React-Bootstrap, Animate.css
+- **Styling**: Custom CSS with custom fonts
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-### `npm test`
+## Available Scripts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Command | Description |
+|---------|-------------|
+| `npm start` | Run the app in development mode |
+| `npm test` | Launch the test runner |
+| `npm run build` | Build the app for production |
