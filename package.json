@@ -1,12 +1,21 @@
 {
   "name": "web-dev-projects-main",
   "version": "1.0.0",
-  "description": "",
+  "description": "Collection of web development projects built by Shivang1538",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:login-register-form": "npm --prefix login-register-form start",
+    "start:personal-portfolio": "npm --prefix personal-portfolio start",
+    "start:react-form": "npm --prefix react-form start",
+    "start:food-ordering-app": "npm --prefix food-ordering-app start",
+    "start:food-ordering-server": "npm --prefix food-ordering-app/server start",
+    "build:login-register-form": "npm --prefix login-register-form build",
+    "build:personal-portfolio": "npm --prefix personal-portfolio build",
+    "build:react-form": "npm --prefix react-form build",
+    "build:food-ordering-app": "npm --prefix food-ordering-app build",
+    "test": "echo \"Use project-specific test scripts\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Shivang1538",
   "license": "ISC"
 }
