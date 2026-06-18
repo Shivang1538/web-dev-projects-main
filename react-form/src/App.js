@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { MultiStepProgressBar } from "./components/MultiStepProgressBar";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MultiStepForm } from "./components/MultiStepForm";
 import { questions } from "./Questions";
 
@@ -20,7 +19,7 @@ function App() {
   }
 
   const nextButton = () => {
-    if (index - 3) {
+    if (index < totalPagesCount) {
       setIndex(prevIndex => prevIndex + 1);
     } else {
       // clear the form on submit
@@ -69,8 +68,8 @@ function App() {
                 />
             </Card.Body>
             <Card.Footer className="d-flex justify-content-between">
-              <Button onClick={prevButton} disabled={index == 1}>Previous</Button>
-              <Button onClick={nextButton}>{index == totalPagesCount ? 'Submit' : 'Next'}</Button>
+              <Button onClick={prevButton} disabled={index === 1}>Previous</Button>
+              <Button onClick={nextButton}>{index === totalPagesCount ? 'Submit' : 'Next'}</Button>
             </Card.Footer>
           </Card>
         }
