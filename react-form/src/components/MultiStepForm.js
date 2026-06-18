@@ -1,21 +1,10 @@
-import { useState, useEffect } from "react";
 import { FormItem } from "./FormItem";
 
 export const MultiStepForm = ({ step, onPageUpdate, list, pagesAnswers }) => {
-  const [answers, setAnswers] = useState({ index: step, ...(pagesAnswers[step] || {}) });
-
-  useEffect(() => {
-    setAnswers({ index: step, ...(pagesAnswers[step] || {}) });
-  }, [step, pagesAnswers]);
-
-  useEffect(() => {
-    if (Object.keys(answers).length > 1) {
-      onPageUpdate(step, answers);
-    }
-  }, [answers, onPageUpdate, step]);
+  const currentAnswers = pagesAnswers[step] || {};
 
   const updateAnswers = (value, category) => {
-    setAnswers({...answers, [category]: value});
+    onPageUpdate(step, { index: step, ...currentAnswers, [category]: value });
   };
 
   return (

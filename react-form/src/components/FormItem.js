@@ -1,8 +1,12 @@
 import { Form } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const FormItem =  ({ item, onChange, answer })  => {
   const [currentValue, setCurrentValue] = useState(answer || null);
+
+  useEffect(() => {
+    setCurrentValue(answer || null);
+  }, [answer]);
 
   const handleChange = (value) => {
     setCurrentValue(value);
@@ -45,8 +49,8 @@ export const FormItem =  ({ item, onChange, answer })  => {
         <div className="mt-2">
           <Form.Select aria-label={item.label} onChange={(e) => onChange(e.target.value, item.value)}>
             <option>{item.label}</option>
-            {item.options.map((opt, index) => (
-              <option key={`${opt}_${index}`} value={opt}>{opt}</option>
+            {item.options.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
             ))}
           </Form.Select>
         </div>
