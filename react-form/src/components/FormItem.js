@@ -34,7 +34,8 @@ export const FormItem =  ({ item, onChange, answer })  => {
             type="password"
             id="inputPassword5"
             aria-describedby="passwordHelpBlock"
-            onChange={(e) => onChange(e.target.value, item.value)}
+            onChange={(e) => handleChange(e.target.value)}
+            value={currentValue || ""}
           />
         </>
       );
@@ -47,10 +48,14 @@ export const FormItem =  ({ item, onChange, answer })  => {
     case 'select':
       return (
         <div className="mt-2">
-          <Form.Select aria-label={item.label} onChange={(e) => onChange(e.target.value, item.value)}>
+          <Form.Select
+            aria-label={item.label}
+            onChange={(e) => handleChange(e.target.value)}
+            value={currentValue || ""}
+          >
             <option>{item.label}</option>
-            {item.options.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
+            {item.options.map((opt, index) => (
+              <option key={`${index}-${opt}`} value={opt}>{opt}</option>
             ))}
           </Form.Select>
         </div>
