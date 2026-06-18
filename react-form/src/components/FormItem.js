@@ -54,8 +54,8 @@ export const FormItem =  ({ item, onChange, answer })  => {
             value={currentValue || ""}
           >
             <option>{item.label}</option>
-            {item.options.map((opt, index) => (
-              <option key={`${index}-${opt}`} value={opt}>{opt}</option>
+            {item.options.map((opt) => (
+              <option key={`${item.value}-${opt}`} value={opt}>{opt}</option>
             ))}
           </Form.Select>
         </div>

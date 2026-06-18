@@ -4,7 +4,7 @@ export const MultiStepForm = ({ step, onPageUpdate, list, pagesAnswers }) => {
   const currentAnswers = pagesAnswers[step] || {};
 
   const updateAnswers = (value, category) => {
-    onPageUpdate(step, { index: step, ...currentAnswers, [category]: value });
+    onPageUpdate(step, { ...currentAnswers, [category]: value });
   };
 
   return (
