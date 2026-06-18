@@ -33,7 +33,7 @@ npm run start:food-ordering-app
 For food-ordering backend:
 
 ```bash
-cd /home/runner/work/web-dev-projects-main/web-dev-projects-main/food-ordering-app/server
+cd food-ordering-app/server
 npm install
 npm run start
 ```
