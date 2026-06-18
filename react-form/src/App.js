@@ -19,7 +19,7 @@ function App() {
   }
 
   const nextButton = () => {
-    if (index !== totalPagesCount) {
+    if (index < totalPagesCount) {
       setIndex(prevIndex => prevIndex + 1);
     } else {
       // clear the form on submit
